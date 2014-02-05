@@ -17,12 +17,16 @@ setup( name='rea-collections',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
     ],
+    dependency_links = [
+        'http://github.com/commoncode/entropy/tarball/master#egg=django-entropy',
+        'http://github.com/commoncode/rea-serializers/tarball/master#egg=rea-serializers',
+    ],
+    setup_requires = [
+        'pip',
+    ],
     install_requires = [
-        'rea-serializers',
+        'rea-serializers',  # which in turn requires `rea`
         'django-denormalize',
         'pymongo',
     ],
-    dependency_links = [
-        'git+git@github.com:commoncode/rea-serializers.git#egg=rea-serializers',
-    ]
 )
