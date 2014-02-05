@@ -18,8 +18,7 @@ setup( name='rea-collections',
         'Programming Language :: Python',
     ],
     dependency_links = [
-        'http://github.com/commoncode/entropy/tarball/master#egg=django-entropy',
-        'http://github.com/commoncode/rea-serializers/tarball/master#egg=rea-serializers',
+        'http://github.com/commoncode/rea-serializers/tarball/master#egg=rea-serializers-0.0.1',
     ],
     setup_requires = [
         'pip',
