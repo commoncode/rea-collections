@@ -1,6 +1,6 @@
 from rea.models.events import Event, DecrementLine, IncrementLine
 
-from ..mongo import mongodb, DRFDocumentCollection
+from cqrs.mongo import mongodb, DRFDocumentCollection
 
 
 class EventDocumentCollection(DRFDocumentCollection):

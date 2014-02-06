@@ -1,6 +1,6 @@
 from rea.models.contracts import Contract, Clause, ClauseRule, ContractClause
 
-from ..mongo import mongodb, DRFDocumentCollection
+from cqrs.mongo import mongodb, DRFDocumentCollection
 
 
 class ContractDocumentCollection(DRFDocumentCollection):

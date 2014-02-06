@@ -1,6 +1,6 @@
 from rea.models.resources import Resource
 
-from ..mongo import mongodb, DRFDocumentCollection
+from cqrs.mongo import mongodb, DRFDocumentCollection
 
 
 class ResourceDocumentCollection(DRFDocumentCollection):

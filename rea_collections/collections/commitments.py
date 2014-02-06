@@ -2,7 +2,8 @@ from rea.models.commitments import (
     Commitment, IncrementCommitment, DecrementCommitment
 )
 
-from ..mongo import mongodb, DRFDocumentCollection
+from cqrs.mongo import mongodb, DRFDocumentCollection
+
 from .events import EventDocumentCollection
 
 

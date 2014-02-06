@@ -1,6 +1,6 @@
 from rea.models.agents import Agent
 
-from ..mongo import mongodb, DRFDocumentCollection
+from cqrs.mongo import mongodb, DRFDocumentCollection
 
 
 class AgentDocumentCollection(DRFDocumentCollection):
