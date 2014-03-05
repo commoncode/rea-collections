@@ -1,42 +1,42 @@
-from rea.models.contracts import Contract, Clause, ClauseRule, ContractClause
+from rea.models.contracts import Contract, Clause, ClauseRuleAspect, ContractClause
 
 from cqrs.mongo import mongodb, DRFDocumentCollection
 
 
 class ContractDocumentCollection(DRFDocumentCollection):
-    """
+    '''
     A denormalized collection of `Contract`
-    """
-    name = "contract"
+    '''
+    name = 'contract'
     model = Contract
-    serializer_class = "rea.serializers.contracts.ContractSerializer"
+    serializer_class = 'rea_serializers.serializers.ContractSerializer'
 
 
 class ClauseDocumentCollection(DRFDocumentCollection):
-    """
+    '''
     A denormalized collection of `Clause`
-    """
-    name = "clause"
+    '''
+    name = 'clause'
     model = Clause
-    serializer_class = "rea.serializers.contracts.ClauseSerializer"
+    serializer_class = 'rea_serializers.serializers.ClauseSerializer'
 
 
 class ClauseRuleDocumentCollection(DRFDocumentCollection):
-    """
-    A denormalized collection of `ClauseRule`
-    """
-    name = "clause_rule"
-    model = ClauseRule
-    serializer_class = "rea.serializers.contracts.ClauseRuleSerializer"
+    '''
+    A denormalized collection of `ClauseRuleAspect`
+    '''
+    name = 'clause_rule'
+    model = ClauseRuleAspect
+    serializer_class = 'rea_serializers.serializers.ClauseRuleAspectSerializer'
 
 
 class ContractClauseDocumentCollection(DRFDocumentCollection):
-    """
+    '''
     A denormalized collection of `ContractClause`
-    """
-    name = "contract_clause"
+    '''
+    name = 'contract_clause'
     model = ContractClause
-    serializer_class = "rea.serializers.contracts.ContractClauseSerializer"
+    serializer_class = 'rea_serializers.serializers.ContractClauseSerializer'
 
 
 mongodb.register(ContractDocumentCollection())

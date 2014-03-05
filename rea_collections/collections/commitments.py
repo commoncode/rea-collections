@@ -4,8 +4,6 @@ from rea.models.commitments import (
 
 from cqrs.mongo import mongodb, DRFDocumentCollection
 
-from .events import EventDocumentCollection
-
 
 class CommitmentDocumentCollection(DRFDocumentCollection):
     """
@@ -13,7 +11,7 @@ class CommitmentDocumentCollection(DRFDocumentCollection):
     """
     name = "commitment"
     model = Commitment
-    serializer_class = "rea_serializers.commitments.CommitmentSerializer"
+    serializer_class = "rea_serializers.serializers.CommitmentSerializer"
 
 
 class IncrementCommitmentDocumentCollection(DRFDocumentCollection):
@@ -23,7 +21,7 @@ class IncrementCommitmentDocumentCollection(DRFDocumentCollection):
     name = "increment_commitment"
     model = IncrementCommitment
     serializer_class = (
-        "rea_serializers.commitments.IncrementCommitmentSerializer")
+        "rea_serializers.serializers.IncrementCommitmentSerializer")
 
 
 class DecrementCommitmentDocumentCollection(DRFDocumentCollection):
@@ -33,7 +31,7 @@ class DecrementCommitmentDocumentCollection(DRFDocumentCollection):
     name = "decrement_commitment"
     model = DecrementCommitment
     serializer_class = (
-        "rea_serializers.commitments.DecrementCommitmentSerializer")
+        "rea_serializers.serializers.DecrementCommitmentSerializer")
 
 
 mongodb.register(CommitmentDocumentCollection())

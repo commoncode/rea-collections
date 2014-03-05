@@ -9,7 +9,7 @@ class EventDocumentCollection(DRFDocumentCollection):
     """
     name = "event"
     model = Event
-    serializer_class = "rea_serializers.events.EventSerializer"
+    serializer_class = "rea_serializers.serializers.EventSerializer"
 
 
 class IncrementLineDocumentCollection(DRFDocumentCollection):
@@ -18,7 +18,7 @@ class IncrementLineDocumentCollection(DRFDocumentCollection):
     """
     name = "increment_line"
     model = IncrementLine
-    serializer_class = "rea_serializers.events.IncrementLineSerializer"
+    serializer_class = "rea_serializers.serializers.IncrementLineSerializer"
 
 
 class DecrementLineDocumentCollection(DRFDocumentCollection):
@@ -27,7 +27,7 @@ class DecrementLineDocumentCollection(DRFDocumentCollection):
     """
     name = "decrement_line"
     model = DecrementLine
-    serializer_class = "rea_serializers.events.DecrementLineSerializer"
+    serializer_class = "rea_serializers.serializers.DecrementLineSerializer"
 
 
 mongodb.register(EventDocumentCollection())

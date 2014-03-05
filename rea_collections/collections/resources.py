@@ -7,7 +7,7 @@ class ResourceDocumentCollection(DRFDocumentCollection):
     """
     A denormalized collection of `Resource`
     """
-    serializer_class = "rea_serializers.serializers.resources.ResourceSerializer"
+    serializer_class = "rea_serializers.serializers.ResourceSerializer"
     model = Resource
     name = "resource"
 
